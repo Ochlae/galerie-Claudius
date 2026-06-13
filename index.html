@@ -1,1 +1,2146 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Claudius Art Studio</title>
+
+<style>
+body{
+    margin:0;
+    background:#0d0d0d;
+    color:white;
+    font-family:Arial,sans-serif;
+}
+
+header{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.85)),
+    url('images/les_abstraits/amadeus.jpg') center/cover;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+.logo-site{
+    width:900px;
+    max-width:90%;
+    height:auto;
+    display:block;
+    margin-bottom:35px;
+    border-radius:12px;
+    box-shadow:0 0 30px rgba(0,0,0,0.65);
+}
+header h1{
+    font-size:4rem;
+    margin-bottom:20px;
+    letter-spacing:3px;
+}
+
+header p{
+    max-width:700px;
+    line-height:1.6;
+    color:#ddd;
+}
+
+.btn{
+    margin-top:30px;
+    padding:14px 30px;
+    background:#b22222;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#e03a3a;
+}
+
+section{
+    padding:70px 8%;
+}
+
+h2{
+    font-size:2rem;
+    margin-bottom:40px;
+    border-bottom:1px solid #333;
+    padding-bottom:10px;
+}
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+}
+
+.card{
+    background:#181818;
+    border-radius:12px;
+    overflow:hidden;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.02);
+}
+
+.card img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+.card-content{
+    padding:22px;
+}
+
+.card-content h3{
+    margin-top:0;
+    margin-bottom:12px;
+    font-size:1.4rem;
+}
+
+.card-content p{
+    color:#ccc;
+    line-height:1.6;
+}
+.menu-series{
+margin:25px 0;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+}
+
+.menu-series a{
+color:white;
+text-decoration:none;
+padding:8px 16px;
+border:1px solid #555;
+border-radius:20px;
+}
+
+.menu-series a:hover{
+background:#b22222;
+}
+.viewer{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.92);
+    z-index:9999;
+    align-items:center;
+    justify-content:center;
+}
+
+.viewer img{
+    max-width:90%;
+    max-height:85%;
+    border-radius:10px;
+}
+
+.close-viewer,
+.prev-viewer,
+.next-viewer{
+    position:absolute;
+    color:white;
+    font-size:3rem;
+    cursor:pointer;
+    user-select:none;
+}
+
+.close-viewer{
+    top:25px;
+    right:35px;
+}
+
+.prev-viewer{
+    left:35px;
+    top:50%;
+}
+
+.next-viewer{
+    right:35px;
+    top:50%;
+}
+
+    
+footer{
+    text-align:center;
+    padding:40px;
+    color:#888;
+    border-top:1px solid #222;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<img src="images/logo_claudius_art_studio.jpg"
+     alt="Claudius Art Studio"
+     class="logo-site">
+
+<h1 style="display:none;">Claudius Art Studio</h1>
+<p>
+Peintures originales de Claude Grand.<br>
+Un univers de matière, de mémoire et de lumière.
+</p>
+
+<nav class="menu-series">
+
+<a href="#aquarelles">Les Aquarelles</a>
+
+<a href="#abstraits">Les Abstraits</a>
+    
+<a href="#magnetiques">Les Magnétiques</a>
+
+<a href="#evasions">Les Évasions</a>
+
+<a href="#kalista">Les Kalista</a>
+    
+<a href="#expressions">Expressions</a>
+    
+<a href="#chant-des-matieres">Le Chant des Matières</a>
+    
+<a href="#ames-perdues">Les Âmes Perdues</a>
+    
+<a href="#amoureux">Les Amoureux</a>
+    
+<a href="#asiales">Les Asiales</a>
+    
+<a href="#bateaux-rouges">Les Bateaux Rouges</a>
+    
+<a href="#lignes">Les Lignes</a>
+
+<a href="#amadeos">Les Amadeos</a> 
+
+<a href="#solitudes">Les Solitudes</a>    
+
+<a href="#signatures">Les Signatures</a>   
+
+<a href="#damnes">Les Damnés</a>   
+    
+<a href="#paysages">Les Paysages</a>   
+    
+<a href="#petits-endroits">Les Petits Endroits</a>
+
+<a href="#encres-et-fusain">Les Encres et Fusain</a>  
+
+ <a href="#villages-fortifies">Les Villages Fortifiés</a>
+
+<a href="#portraits">Les Portraits</a> 
+
+    
+</nav>
+
+<a href="#galerie" class="btn">Découvrir les œuvres</a>
+
+</header>
+
+<section id="galerie">
+
+<!-- ===================================================== -->
+<!-- ================= LES ABSTRAITS =================== -->
+<!-- ===================================================== -->
+
+<h2 id="abstraits">Les Abstraits</h2>
+<div class="gallery">
+
+<a class="card" href="images/les_abstraits/amadeus.jpg" target="_blank">
+<img src="images/les_abstraits/amadeus.jpg">
+<div class="card-content">
+<h3>Amadéus</h3>
+<p><strong>Technique :</strong> Acrylique sur papier</p>
+<p><strong>Dimensions :</strong> 120 x 80 cm</p>
+<p>Des torrents de feu et d’azur jaillissent dans un même souffle. La couleur explose, libre et sauvage, comme une énergie impossible à contenir.</p>
+</div>
+</a>
+
+<a class="card" href="images/les_abstraits/ange_bleu.jpg" target="_blank">
+<img src="images/les_abstraits/ange_bleu.jpg">
+<div class="card-content">
+<h3>Ange bleu</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 130 x 90 cm</p>
+<p>Des courants de lumière et de lave traversent la toile dans une danse sauvage. La couleur devient souffle, tempête et naissance d’un monde incandescent.</p>
+</div>
+</a>
+
+<a class="card" href="images/les_abstraits/arbre_des_fees.jpeg" target="_blank">
+<img src="images/les_abstraits/arbre_des_fees.jpeg">
+<div class="card-content">
+<h3>L’arbre des fées</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 130 x 90 cm</p>
+<p>Dans une pluie d’éclats et de couleurs, l’arbre déploie ses branches comme des veines de lumière reliant la terre aux songes invisibles.</p>
+</div>
+</a>
+
+<a class="card" href="images/les_abstraits/ballade1.jpg" target="_blank">
+<img src="images/les_abstraits/ballade1.jpg">
+<div class="card-content">
+<h3>Ballade 1</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x 70 cm</p>
+<p>Des formes anciennes émergent de la pénombre comme des fragments de mémoire. La lumière ocre réchauffe doucement ce monde immobile et mystérieux.</p>
+</div>
+</a>
+
+<a class="card" href="images/les_abstraits/ballade2.jpg" target="_blank">
+<img src="images/les_abstraits/ballade2.jpg">
+<div class="card-content">
+<h3>Ballade 2</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x 70 cm</p>
+<p>Des fragments de lumière et de matière s’équilibrent dans un silence profond. L’ocre et le rouge semblent garder la chaleur secrète d’un paysage oublié.</p>
+</div>
+</a>
+
+<a class="card" href="images/les_abstraits/exclamation.jpg" target="_blank">
+<img src="images/les_abstraits/exclamation.jpg">
+<div class="card-content">
+<h3>Exclamation</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 75 x 110 cm</p>
+<p>Des masses sombres et lumineuses se frôlent dans une tension silencieuse. Le rouge éclaire l’espace comme une présence vive au cœur de l’ombre.</p>
+</div>
+</a>
+
+<a class="card" href="images/les_abstraits/la_melancolie.jpg" target="_blank">
+<img src="images/les_abstraits/la_melancolie.jpg">
+<div class="card-content">
+<h3>La mélancolie</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 75 x 110 cm</p>
+<p>Sous un soleil immobile, les formes dressées veillent dans le silence. Les rouges profonds et les matières usées racontent la mémoire d’une cité intérieure.</p>
+</div>
+</a>
+
+<a class="card" href="images/les_abstraits/melancolie2.jpg" target="_blank">
+<img src="images/les_abstraits/melancolie2.jpg">
+<div class="card-content">
+<h3>Mélancolie 2</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 75 x 110 cm</p>
+<p>Sous un soleil blessé, les formes s’élèvent dans une pluie de matières et d’éclats. Le rouge consume lentement le silence d’une ville intérieure.</p>
+</div>
+</a>
+
+<a class="card" href="images/les_abstraits/nu7.jpg" target="_blank">
+<img src="images/les_abstraits/nu7.jpg">
+<div class="card-content">
+<h3>Nu 7</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 75 x 110 cm</p>
+<p>Courbes douces et lumière fragile dessinent une présence intime. Dans les rouges profonds du fond, le corps semble flotter entre force et abandon.</p>
+</div>
+</a>
+
+<a class="card" href="images/les_abstraits/presence_verticale.jpg" target="_blank">
+<img src="images/les_abstraits/presence_verticale.jpg">
+<div class="card-content">
+<h3>Présence verticale</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 75 x 110 cm</p>
+<p>Une forme obscure traverse la lumière comme une apparition silencieuse. Le rouge et l’or vibrent ensemble dans une tension lente et presque sacrée.</p>
+</div>
+</a>
+
+<a class="card" href="images/les_abstraits/vivalova.jpg" target="_blank">
+<img src="images/les_abstraits/vivalova.jpg">
+<div class="card-content">
+<h3>Vivalova</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 80 x 120 cm</p>
+<p>Des éclats de couleurs s’entrechoquent dans une course libre et instinctive. La toile devient mouvement, vibration et énergie suspendue dans le rouge incandescent.</p>
+</div>
+</a>
+    
+<a class="card" href="images/les_abstraits/cyrius.jpg" target="_blank">
+<img src="images/les_abstraits/cyrius.jpg">
+<div class="card-content">
+<h3>Cyrius</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 120 x 80 cm</p>
+<p>Les couleurs dansent là où naissent les étoiles</p>
+</div>
+</a>
+    
+<a class="card" href="images/les_abstraits/eclat.jpg" target="_blank">
+<img src="images/les_abstraits/eclat.jpg">
+<div class="card-content">
+<h3>Eclat</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 80 x 120 cm</p>
+<p>Les forces invisibles dessinent leur propre lumière</p>
+</div>
+</a>
+
+  <a class="card" href="images/les_abstraits/fabulous.jpg" target="_blank">
+<img src="images/les_abstraits/fabulous.jpg">
+<div class="card-content">
+<h3>Fabulous</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 80 x 120 cm</p>
+<p>Des éclats d'azur dans le brasier du monde</p>
+</div>
+</a>  
+    
+<a class="card" href="images/les_abstraits/l_ardoise_du_peintre.jpg" target="_blank">
+<img src="images/les_abstraits/l_ardoise_du_peintre.jpg">
+<div class="card-content">
+<h3>l'Ardoise du Peintre</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 80 x 120 cm</p>
+<p>sur l'ardoise du temps le peintre décris sa lumière</p>
+</div>
+</a>    
+    
+   <a class="card" href="images/les_abstraits/le_chant_des_murailles.jpg" target="_blank">
+<img src="images/les_abstraits/le_chant_des_murailles.jpg">
+<div class="card-content">
+<h3>le Chant des Murailles</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 80 x 80 cm</p>
+<p>Les murailles retiennent ce que le temps a oublié</p>
+</div>
+</a>   
+
+    <a class="card" href="images/les_abstraits/le_chemin.jpg" target="_blank">
+<img src="images/les_abstraits/le_chemin.jpg">
+<div class="card-content">
+<h3>le Chemin</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 75 x 110 cm</p>
+<p>Dans la brume des jours, une voie s'invente</p>
+</div>
+</a>     
+
+<a class="card" href="images/les_abstraits/le_takoma.jpg" target="_blank">
+<img src="images/les_abstraits/le_takoma.jpg">
+<div class="card-content">
+<h3>le Takoma</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 75 x 110 cm</p>
+<p>La mer a gardé le navire, le vent a gardé son nom</p>
+</div>
+</a>     
+
+<a class="card" href="images/les_abstraits/redwone.jpg" target="_blank">
+<img src="images/les_abstraits/redwone.jpg">
+<div class="card-content">
+<h3>RedWone</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 75 x 110 cm</p>
+<p>Le feu peint ce que les mots ignorent</p>
+</div>
+</a> 
+       
+<a class="card" href="images/les_abstraits/plages_et_rochers.jpg" target="_blank">
+<img src="images/les_abstraits/plages_et_rochers.jpg">
+<div class="card-content">
+<h3>Vu d'en Haut</h3>
+<p><strong>Technique :</strong> Acrylique sur papier</p>
+<p><strong>Dimensions :</strong> 80 x 80 cm</p>
+<p><La mer peint ses rêves sur les falaises</p>
+</div>
+</a>
+
+    
+ <a class="card" href="images/les_abstraits/fenetre_sur_cour.jpg" target="_blank">
+<img src="images/les_abstraits/fenetre_sur_cour.jpg">
+<div class="card-content">
+<h3>Tumulte</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 40 x 60 cm</p>
+<p><strong>Année :</strong> 2025</p>
+<p>
+Derrieère la fenêtre , le bruit de la rue
+</p>
+</div>
+</a> 
+
+ 
+    
+
+
+    
+</div> 
+
+
+
+<!-- ===================================================== -->
+<!-- ================= LES MAGNETIQUES =================== -->
+<!-- ===================================================== -->
+  
+    
+<h2 id="magnetiques">Les Magnètiques</h2>
+<div class="gallery">
+
+<a class="card" href="images/les_magnetiques/bleu.jpg" target="_blank">
+<img src="images/les_magnetiques/bleu.jpg">
+<div class="card-content">
+<h3>Bleu Magnétique</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 80 x 120 cm</p>
+<p><strong>Année :</strong> 2020</p>
+<p>
+Au cœur du bleu, palpite une force invisible
+</p>
+</div>
+</a>  
+
+<a class="card" href="images/les_magnetiques/orange.jpg" target="_blank">
+<img src="images/les_magnetiques/orange.jpg">
+<div class="card-content">
+<h3> Magnétique Bleu Orange</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 80 x 120 cm</p>
+<p><strong>Année :</strong> 2020</p>
+<p>
+Une pluie de lumière embrase le silence bleu
+</p>
+</div>
+</a>  
+    
+<a class="card" href="images/les_magnetiques/origine.jpg" target="_blank">
+<img src="images/les_magnetiques/origine.jpg">
+<div class="card-content">
+<h3>Origine</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 80 x 80 cm</p>
+<p><strong>Année :</strong> 2025</p>
+<p>
+Une matière première traverse le silence, comme si la couleur retrouvait sa source.
+</p>
+</div>
+</a>
+
+ <a class="card" href="images/les_magnetiques/pulsar.jpg" target="_blank">
+<img src="images/les_magnetiques/pulsar.jpg">
+<div class="card-content">
+<h3>Pulsar</h3>
+<p><strong>Technique :</strong> Acrylique sur papier</p>
+<p><strong>Dimensions :</strong> 80 x 80 cm</p>
+<p><strong>Année :</strong> 2025</p>
+<p>
+Un cœur lumineux pris dans un entrelacs d'énergies et de trajectoires
+</p>
+</div>
+</a>   
+    
+<a class="card" href="images/les_magnetiques/fragments.jpg" target="_blank">
+<img src="images/les_magnetiques/fragments.jpg">
+<div class="card-content">
+<h3>Fragments d'Etoiles</h3>
+<p><strong>Technique :</strong> Acrylique sur papier</p>
+<p><strong>Dimensions :</strong> 80 x 80 cm</p>
+<p><strong>Année :</strong> 2025</p>
+<p>
+Morceaux de monde assemblés dans un même souffle.
+</p>
+</div>
+</a>
+    
+ <a class="card" href="images/les_magnetiques/sable.jpg" target="_blank">
+<img src="images/les_magnetiques/sable.jpg">
+<div class="card-content">
+<h3>Sable</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 80 x 120 cm</p>
+<p><strong>Année :</strong> 2020</p>
+<p>
+Mille chemins se croisent là où le silence tisse ses liens
+</p>
+</div>
+</a>   
+
+ <a class="card" href="images/les_magnetiques/tumulte.jpg" target="_blank">
+<img src="images/les_magnetiques/tumulte.jpg">
+<div class="card-content">
+<h3>Tumulte</h3>
+<p><strong>Technique :</strong> Acrylique sur papier</p>
+<p><strong>Dimensions :</strong> 80 x 80 cm</p>
+<p><strong>Année :</strong> 2025</p>
+<p>
+Du désordre naît une harmonie insoupçonnée
+</p>
+</div>
+</a>  
+
+
+
+    
+</div>  
+
+<!-- ===================================================== -->
+<!-- =========== LE CHANT DES MATIERES =================== -->
+<!-- ===================================================== -->
+
+    
+<h2 id="chant-des-matieres">le_chant_des_matieres</h2>
+<div class="gallery">
+ <a class="card" href="images/le_chant_des_matieres/elodie.jpg" target="_blank">
+<img src="images/le_chant_des_matieres/elodie.jpg">
+<div class="card-content">
+<h3>Elodie</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 75 x 110 cm</p>
+<p><strong>Année :</strong> 2023</p>
+<p>
+Elodie,mille lianes de lumière tissent un rêve sans fin
+</p>
+</div>
+</a>  
+
+ <a class="card" href="images/le_chant_des_matieres/filao.jpg" target="_blank">
+<img src="images/le_chant_des_matieres/filao.jpg">
+<div class="card-content">
+<h3>Filao</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 120 x 80 cm</p>
+<p><strong>Année :</strong> 2022</p>
+<p>
+Du désordre naît parfois la plus secrète des harmonies
+</p>
+</div>
+</a> 
+
+ <a class="card" href="images/le_chant_des_matieres/la_grande_vague.jpg" target="_blank">
+<img src="images/le_chant_des_matieres/la_grande_vague.jpg">
+<div class="card-content">
+<h3>Océan de braise</h3>
+<p><strong>Technique :</strong> Acrylique sur papier</p>
+<p><strong>Dimensions :</strong> 80 x 80 cm</p>
+<p><strong>Année :</strong> 2024</p>
+<p>
+Sous les vagues du temps, un feu secret continue de danser dans les profondeurs du monde
+</p>
+</div>
+</a> 
+
+ <a class="card" href="images/le_chant_des_matieres/la_nuit_des_couleurs.jpg" target="_blank">
+<img src="images/le_chant_des_matieres/la_nuit_des_couleurs.jpg">
+<div class="card-content">
+<h3>Ma cathédrale</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 75 x 110 cm</p>
+<p><strong>Année :</strong> 2018</p>
+<p>
+Derrière l'enchevêtrement des lignes s'élève une cathédrale de pensées
+</p>
+</div>
+</a> 
+
+<a class="card" href="images/le_chant_des_matieres/le_silence_es_arbres.jpg" target="_blank">
+<img src="images/le_chant_des_matieres/le_silence_des_arbres.jpg">
+<div class="card-content">
+<h3>Les veines du temps</h3>
+<p><strong>Technique :</strong> Acrylique sur papier</p>
+<p><strong>Dimensions :</strong> 80 x 80 cm</p>
+<p><strong>Année :</strong> 2018</p>
+<p>
+Chaque branche porte la trace d'un instant que le temps n'a pas effacé
+</p>
+</div>
+</a> 
+
+<a class="card" href="images/le_chant_des_matieres/les_oies_sauvages.jpg" target="_blank">
+<img src="images/le_chant_des_matieres/les_oies_sauvages.jpg">
+<div class="card-content">
+<h3>Les oies sauvages</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 75 x 110 cm</p>
+<p><strong>Année :</strong> 2019</p>
+<p>
+Portés par le souffle des saisons, elles écrivent leur chemin entre le ciel et la mémoire
+</p>
+</div>
+</a> 
+
+
+<a class="card" href="images/le_chant_des_matieres/murmure.jpg" target="_blank">
+<img src="images/le_chant_des_matieres/murmure.jpg">
+<div class="card-content">
+<h3>Les Chemins du Hasard</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 110 x 75 cm</p>
+<p><strong>Année :</strong> 2023</p>
+<p>
+Le hasard dessine parfois des routes que le cœur reconnaît
+</p>
+</div>
+</a> 
+
+<a class="card" href="images/le_chant_des_matieres/musique_sauvage.jpg" target="_blank">
+<img src="images/le_chant_des_matieres/musique_sauvage.jpg">
+<div class="card-content">
+<h3>Fugue en rouge majeur</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 75 x 110 cm</p>
+<p><strong>Année :</strong> 2023</p>
+<p>
+Des cordes de lumière vibrent au rythme d'une mélodie sans fin.
+</p>
+</div>
+</a> 
+
+<a class="card" href="images/le_chant_des_matieres/pensees_libres.jpg" target="_blank">
+<img src="images/le_chant_des_matieres/pensees_libres.jpg">
+<div class="card-content">
+<h3>Le labytinthe des pensées</h3>
+<p><strong>Technique :</strong> Acrylique sur papier</p>
+<p><strong>Dimensions :</strong> 80 x 80 cm</p>
+<p><strong>Année :</strong> 2025</p>
+<p>
+Mille pensées s'entrelacent, mais chacune cherche la même lumière.
+</p>
+</div>
+</a>     
+    
+</div>
+    
+<!-- ===================================================== -->
+<!-- ================= LES EVASIONS =================== -->
+<!-- ===================================================== -->
+    
+<h2 id="evasions">Les Évasions</h2>
+<div class="gallery">
+
+<a class="card" href="images/evasion/evasion_rouge.jpg" target="_blank">
+<img src="images/evasion/evasion_rouge.jpg">
+<div class="card-content">
+<h3>Evasion Rouge</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 80 x 80 cm</p>
+<p><strong>Année :</strong> 2022</p>
+<p>
+Une mer de feu tranquille s'étend sous le regard des oiseaux.
+</p>
+</div>
+</a> 
+
+ <a class="card" href="images/evasion/millenium.jpg" target="_blank">
+<img src="images/evasion/millenium.jpg">
+<div class="card-content">
+<h3>Millenium</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 70 x 50 cm</p>
+<p><strong>Année :</strong> 2022</p>
+<p>
+Ce qui semblait brisé devient parfois le plus précieux des paysages.
+</p>
+</div>
+</a> 
+
+ <a class="card" href="images/evasion/plutonium.jpg" target="_blank">
+<img src="images/evasion/plutonium.jpg">
+<div class="card-content">
+<h3>Plutonium</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 70 x 50 cm</p>
+<p><strong>Année :</strong> 2022</p>
+<p>
+Les couleurs se brisent comme des souvenirs avant de renaître autrement.
+</p>
+</div>
+</a> 
+
+   <a class="card" href="images/evasion/reverie_en_bleu.jpg" target="_blank">
+<img src="images/evasion/reverie_en_bleu.jpg">
+<div class="card-content">
+<h3>Rêverie en Bleu</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 80 x 80 cm</p>
+<p><strong>Année :</strong> 2022</p>
+<p>
+Les ailes blanches dessinent des chemins que nul regard ne peut suivre.
+</p>
+</div>
+</a>   
+
+<a class="card" href="images/evasion/un_autre_monde.jpg" target="_blank">
+<img src="images/evasion/un_autre_monde.jpg">
+<div class="card-content">
+<h3>Un autre Monde</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 80 x 80 cm</p>
+<p><strong>Année :</strong> 2022</p>
+<p>
+Les couleurs se heurtent, puis inventent ensemble un nouvel horizon.
+</p>
+</div>
+</a>   
+    
+</div>
+    
+<!-- ===================================================== -->
+<!-- ================= LES KALISTA =================== -->
+<!-- ===================================================== -->
+    
+<h2 id="kalista">kalista</h2>
+<div class="gallery">
+    
+<a class="card" href="images/kalista/kalista.jpg" target="_blank">
+<img src="images/kalista/kalista.jpg">
+<div class="card-content">
+<h3>Kalista</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 80 x 80 cm</p>
+<p><strong>Année :</strong> 2020</p>
+<p>
+ces lignes verticales qui semblent relier les maisons au ciel, comme si le village tout entier était retenu par des fils invisibles
+</p>
+</div>
+</a>   
+
+<a class="card" href="images/kalista/la_dame_du_lac.jpg" target="_blank">
+<img src="images/kalista/la_dame_du_lac.jpg">
+<div class="card-content">
+<h3>La Dame du Lac</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 80 x 80 cm</p>
+<p><strong>Année :</strong> 2020</p>
+<p>
+Seule au bord de l'eau, elle regarde passer le temps comme un vol d'oiseaux.
+</p>
+</div>
+</a>   
+
+<a class="card" href="images/kalista/le_baobab.jpg" target="_blank">
+<img src="images/kalista/le_baobab.jpg">
+<div class="card-content">
+<h3>Le Baobab</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 110 x 75 cm</p>
+<p><strong>Année :</strong> 2019</p>
+<p>
+Sous la lune de feu, le vieux baobab raconte l'histoire des hommes.
+</p>
+</div>
+</a>   
+    
+<a class="card" href="images/kalista/les_arbres_bleus.jpg" target="_blank">
+<img src="images/kalista/les_arbres_bleus.jpg">
+<div class="card-content">
+<h3>Les Arbres Bleus</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 70 x 50 cm</p>
+<p><strong>Année :</strong> 2019</p>
+<p>
+Entre le feu du ciel et le calme des arbres naît une harmonie secrète.
+</p>
+</div>
+</a>   
+
+<a class="card" href="images/kalista/barques.jpg" target="_blank">
+<img src="images/kalista/barques.jpg">
+<div class="card-content">
+<h3>Les Barques Rouges </h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 100 x 100 cm</p>
+<p><strong>Année :</strong> 2019</p>
+<p>
+Entre les rochers et les coques rouges, les maisons blanches veillent sur le port.
+</p>
+</div>
+
+</a>
+<a class="card" href="images/kalista/les_cavaliers_bleus.jpg" target="_blank">
+<img src="images/kalista/les_cavaliers_bleus.jpg">
+<div class="card-content">
+<h3>Les Cavaliers de Neige </h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 75 x 50 cm</p>
+<p><strong>Année :</strong> 2019</p>
+<p>
+Sous le ciel pâle, les chevaux noirs tracent leur route dans la lumière glacée.
+</p>
+</div>
+</a>
+
+</a>
+<a class="card" href="images/kalista/les_cavaliers_rouges.jpg" target="_blank">
+<img src="images/kalista/les_cavaliers_rouges.jpg">
+<div class="card-content">
+<h3>Les Cavaliers des Grands Espaces  </h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 75 x 50 cm</p>
+<p><strong>Année :</strong> 2019</p>
+<p>
+Sous la lumière du jour, leurs silhouettes se fondent dans la course des chevaux.
+</p>
+</div>
+</a>
+    
+ </a>
+<a class="card" href="images/kalista/manathan.jpg" target="_blank">
+<img src="images/kalista/manathan.jpg">
+<div class="card-content">
+<h3>Les Tours de Manathan </h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 100 x 100 cm</p>
+<p><strong>Année :</strong> 2019</p>
+<p>
+Sous le ciel pâle, les chevaux noirs tracent leur route dans la lumière glacée.
+</p>
+</div>
+</a> 
+    
+</div>
+
+
+<!-- ===================================================== -->
+<!-- ============= LES PETITS ENDROITS =================== -->
+<!-- ===================================================== -->
+
+<h2 id="petits-endroits">Les Petits Endroits</h2>
+<div class="gallery">
+    
+<a class="card" href="images/les_petits_endroits/le_messager.jpg" target="_blank">
+<img src="images/les_petits_endroits/le_messager.jpg">
+<div class="card-content">
+<h3>Le Messager</h3>
+<p><strong>Technique :</strong> Acrylique sur papier</p>
+<p><strong>Dimensions :</strong> 80 x 80 cm</p>
+<p><strong>Année :</strong> 2025</p>
+<p>
+Immobile dans la lumière dorée, il regarde le monde changer autour de lui.
+</p>
+</div>
+</a>   
+
+<a class="card" href="images/les_petits_endroits/sentinelles.jpg" target="_blank">
+<img src="images/les_petits_endroits/sentinelles.jpg">
+<div class="card-content">
+<h3>Les Sentinelles du Temps</h3>
+<p><strong>Technique :</strong> Acrylique sur papier</p>
+<p><strong>Dimensions :</strong> 80 x 80 cm</p>
+<p><strong>Année :</strong> 2025</p>
+<p>
+Sous le ciel embrasé, elles demeurent immobiles tandis que le temps poursuit sa route.
+</p>
+</div>
+</a> 
+
+<a class="card" href="images/les_petits_endroits/remparts.jpg" target="_blank">
+<img src="images/les_petits_endroits/remparts.jpg">
+<div class="card-content">
+<h3>Les Remparts Rouges</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 75 x 50 cm</p>
+<p><strong>Année :</strong> 2025</p>
+<p>
+Derrière les murailles colorées sommeillent mille histoires anciennes.
+</p>
+</div>
+</a> 
+
+<a class="card" href="images/les_petits_endroits/le_petit_port.jpg" target="_blank">
+<img src="images/les_petits_endroits/le_petit_port.jpg">
+<div class="card-content">
+<h3>Le Petit Port</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 80 x 80 cm</p>
+<p><strong>Année :</strong> 2025</p>
+<p>
+Entre le ciel et l'océan, les façades claires du petit port reflètent la lumière du large.
+</p>
+</div>
+</a> 
+
+<a class="card" href="images/les_petits_endroits/les_departs_oublies.jpg" target="_blank">
+<img src="images/les_petits_endroits/les_departs_oublies.jpg">
+<div class="card-content">
+<h3>Le Quai des Barques Rouges</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 80 x 80 cm</p>
+<p><strong>Année :</strong> 2025</p>
+<p>
+Entre le ciel et l'océan, les façades claires du petit port reflètent la lumière du large.
+</p>
+</div>
+</a> 
+
+</div>
+
+<!-- ===================================================== -->
+<!-- ================= LES AQUARELLES =================== -->
+<!-- ===================================================== -->
+    
+<h2 id="aquarelles">Les Aquarelles</h2>
+<div class="gallery">
+
+    
+<a class="card" href="images/aquarelles/couche_de_soleil_sur_le_cap_d_antibe.jpg" target="_blank">
+<img src="images/aquarelles/couche_de_soleil_sur_le_cap_d_antibe.jpg">
+<div class="card-content">
+<h3>Couché de soleil sur le Cap d'Antibes</h3>
+<p><strong>Technique :</strong> Aquarelle</p>
+<p><strong>Dimensions :</strong> 30 x 20 cm</p>
+<p><strong>Année :</strong> 2022</p>
+<p>
+Les rochers plongent dans une mer de lumière,
+sous le regard paisible du ciel méditerranéen.
+</p>
+</div>
+</a>
+
+<a class="card" href="images/aquarelles/leffond.jpg" target="_blank">
+<img src="images/aquarelles/leffond.jpg">
+<div class="card-content">
+<h3>Leffond</h3>
+<p><strong>Technique :</strong> Aquarelle</p>
+<p><strong>Dimensions :</strong> 30 x 20 cm</p>
+<p><strong>Année :</strong> 2022</p>
+<p>Le village sommeille dans la douceur du temps,
+entre souvenirs d'enfance et lumière des saisons.
+</p>
+</div>
+</a>
+
+<a class="card" href="images/aquarelles/kristel.jpg" target="_blank">
+<img src="images/aquarelles/kristel.jpg">
+<div class="card-content">
+<h3>Kristel</h3>
+<p><strong>Technique :</strong> Aquarelle</p>
+<p><strong>Dimensions :</strong> 20 x 30 cm</p>
+<p><strong>Année :</strong> 2022</p>
+<p>
+Drapée de lumière et de silence, elle traverse le temps laissant derrière elle un sillage de douceur. 
+</p>
+</div>
+</a>
+
+<a class="card" href="images/aquarelles/les_voiliers.jpg" target="_blank">
+<img src="images/aquarelles/les_voiliers.jpg">
+<div class="card-content">
+<h3>Les Voiliers</h3>
+<p><strong>Technique :</strong> Aquarelle</p>
+<p><strong>Dimensions :</strong> 30 x 20 cm</p>
+<p><strong>Année :</strong> 2022</p>
+<p>
+Le vent murmure aux voiliers le chemin de l’horizon 
+</p>
+</div>
+</a>
+
+<a class="card" href="images/aquarelles/paysage_abstrait.jpg" target="_blank">
+<img src="images/aquarelles/paysage_abstrait.jpg">
+<div class="card-content">
+<h3>Paysage abstrait</h3>
+<p><strong>Technique :</strong> Aquarelle</p>
+<p><strong>Dimensions :</strong> 30 x 20 cm</p>
+<p><strong>Année :</strong> 2022</p>
+<p>
+Le jour naît dans un murmure d’or et de brume 
+</p>
+</div>
+</a>
+
+<a class="card" href="images/aquarelles/village_casse.jpg" target="_blank">
+<img src="images/aquarelles/village_casse.jpg">
+<div class="card-content">
+<h3>Le village des songes</h3>
+<p><strong>Technique :</strong> Aquarelle</p>
+<p><strong>Dimensions :</strong> 30 x 20 cm</p>
+<p><strong>Année :</strong> 2022</p>
+<p>
+Ici, le temps s'endort sous les toits de lumière 
+</p>
+</div>
+</a>
+
+    
+<a class="card" href="images/aquarelles/couche_de_soleil.jpg" target="_blank">
+<img src="images/aquarelles/couche_de_soleil.jpg">
+<div class="card-content">
+<h3>Un couché de soleil</h3>
+<p><strong>Technique :</strong> Aquarelle</p>
+<p><strong>Dimensions :</strong> 30 x 20 cm</p>
+<p><strong>Année :</strong> 2022</p>
+<p>
+Le soleil dépose un ruban d’or sur l’eau silencieuse. 
+</p>
+</div>
+</a>
+    
+<a class="card" href="images/aquarelles/en_tailand.jpg" target="_blank">
+<img src="images/aquarelles/en_tailand.jpg">
+<div class="card-content">
+<h3>Souvenir d'enfance</h3>
+<p><strong>Technique :</strong> Aquarelle</p>
+<p><strong>Dimensions :</strong> 30 x 20 cm</p>
+<p><strong>Année :</strong> 2022</p>
+<p>
+Le ponton avance là où commencent nos souvenirs
+</p>
+</div>
+</a>
+
+</div>
+    
+    
+<!-- ======================================================= -->
+<!-- ================= ENCRES ET FUSAIN =================== -->
+<!-- ======================================================= -->
+
+<h2 id="encres-et-fusain">Encres et Fusain</h2>
+<div class="gallery">
+    
+<a class="card" href="images/encres_et_fusains/la_foule.jpg" target="_blank">
+<img src="images/encres_et_fusains/la_foule.jpg">
+</a>
+    
+<a class="card" href="images/encres_et_fusains/les_danseuses.jpg" target="_blank">
+<img src="images/encres_et_fusains/les_danseuses.jpg">
+</a>  
+
+<a class="card" href="images/encres_et_fusains/les_demoiselles.jpg" target="_blank">
+<img src="images/encres_et_fusains/les_demoiselles.jpg">
+</a>
+
+<a class="card" href="images/encres_et_fusains/dessin1.jpg" target="_blank">
+<img src="images/encres_et_fusains/dessin1.jpg">
+</a>
+
+<a class="card" href="images/encres_et_fusains/dessin2.jpg" target="_blank">
+<img src="images/encres_et_fusains/dessin2.jpg">
+</a>
+
+<a class="card" href="images/encres_et_fusains/nu2.jpg" target="_blank">
+<img src="images/encres_et_fusains/nu2.jpg">
+</a>
+
+<a class="card" href="images/encres_et_fusains/nu4.jpg" target="_blank">
+<img src="images/encres_et_fusains/nu4.jpg">
+</a > 
+    
+ <a class="card" href="images/encres_et_fusains/sepia.jpg" target="_blank">
+<img src="images/encres_et_fusains/sepia.jpg">
+</a >
+
+ <a class="card" href="images/encres_et_fusains/spirale.jpg" target="_blank">
+<img src="images/encres_et_fusains/spirale.jpg">
+</a >
+
+    
+</div>
+
+    
+
+    
+    
+<!-- ===================================================== -->
+<!-- ================= LES EXPRESSIONS =================== -->
+<!-- ===================================================== -->  
+
+<h2 id="expressions">Expressions</h2>
+<div class="gallery">
+
+<a class="card" href="images/expressions/chat.jpg" target="_blank">
+<img src="images/expressions/chat.jpg">
+<div class="card-content">
+<h3>Chat Snob</h3>
+<p><strong>Technique :</strong> Acrylique sur papier</p>
+<p><strong>Dimensions :</strong> 60 x 60 cm</p>
+<p><strong>Année :</strong> 2025</p>
+<p>
+un chat snob ça va pas traîner sur les toits
+</p>
+</div>
+</a>
+
+<a class="card" href="images/expressions/colibri.jpg" target="_blank">
+<img src="images/expressions/colibri.jpg">
+<div class="card-content">
+<h3>Le Colibri</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 40 x110 cm</p>
+<p><strong>Année :</strong> 2022</p>
+<p>
+25 grammes de plumes arc-en-ciel
+</p>
+</div>
+</a>
+
+<a class="card" href="images/expressions/caligraphie.jpg" target="_blank">
+<img src="images/expressions/caligraphie.jpg">
+<div class="card-content">
+<h3>Caligraphie</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 60 x60 cm</p>
+<p><strong>Année :</strong> 2023</p>
+<p>
+Ecriture reflexe en deux couleurs
+</p>
+</div>
+</a>
+
+<a class="card" href="images/expressions/guerriers.jpg" target="_blank">
+<img src="images/expressions/guerriers.jpg">
+<div class="card-content">
+<h3>Les guerriers  </h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 70 x50 cm</p>
+<p><strong>Année :</strong> 2023</p>
+<p>
+Le retour des guerriers 
+</p>
+</div>
+</a>
+
+
+    
+    
+</div>
+
+
+<!-- ===================================================== -->
+<!-- ================= LES AMES PERDUES =================== -->
+<!-- ===================================================== -->
+
+<h2 id="ames-perdues">Les âmes Perdues</h2>
+<div class="gallery">
+    
+<a class="card" href="images/les_ames_perdues/les_damnes.jpg" target="_blank">
+<img src="images/les_ames_perdues/les_damnes.jpg">
+<div class="card-content">
+<h3>Les Damnés  </h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 100 x 100 cm</p>
+<p><strong>Année :</strong> 2021</p>
+<p>
+La bien le mal et puis...
+</p>
+</div>
+</a>
+
+<a class="card" href="images/les_ames_perdues/les_penitents.jpg" target="_blank">
+<img src="images/les_ames_perdues/les_penitents.jpg">
+<div class="card-content">
+<h3>Les Pénitents  </h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 100 x 100 cm</p>
+<p><strong>Année :</strong> 2021</p>
+<p>
+Le mal et le bien ...
+</p>
+</div>
+</a>
+
+    
+</div>
+
+    
+<!-- ===================================================== -->
+<!-- ================= LES AMOUREUX =================== -->
+<!-- ===================================================== -->
+
+<h2 id="amoureux">Les Amoureux</h2>
+<div class="gallery">
+    
+<a class="card" href="images/les_amoureux/le_couple_aux_chapeaux.jpg" target="_blank">
+<img src="images/les_amoureux/le_couple_aux_chapeaux.jpg">
+<div class="card-content">
+<h3>Les Rêveurs du Dimanche  </h3>
+<p><strong>Technique :</strong> Acrylique sur papier</p>
+<p><strong>Dimensions :</strong> 80 x 80 cm</p>
+<p><strong>Année :</strong> 2024</p>
+<p>
+
+</p>
+</div>
+</a>
+
+<a class="card" href="images/les_amoureux/les_elegants_silencieux.jpg" target="_blank">
+<img src="images/les_amoureux/les_elegants_silencieux.jpg">
+<div class="card-content">
+<h3>Les Amoureux de Papier </h3>
+<p><strong>Technique :</strong> Acrylique sur papier</p>
+<p><strong>Dimensions :</strong> 80 x 80 cm</p>
+<p><strong>Année :</strong> 2024</p>
+<p>
+
+</p>
+</div>
+</a>
+
+
+<a class="card" href="images/les_amoureux/les_nostalgiques.jpg" target="_blank">
+<img src="images/les_amoureux/les_nostalgiques.jpg">
+<div class="card-content">
+<h3>Tendresse du Temps </h3>
+<p><strong>Technique :</strong> Acrylique sur papier</p>
+<p><strong>Dimensions :</strong> 80 x 80 cm</p>
+<p><strong>Année :</strong> 2024</p>
+<p>
+
+</p>
+</div>
+</a>
+
+    
+</div>
+
+    
+<!-- ===================================================== -->
+<!-- ================= LES ASIALES =================== -->
+<!-- ===================================================== -->
+    
+<h2 id="asiales">Les Asiales</h2>
+<div class="gallery">
+
+<a class="card" href="images/les_asiales/asiale1.jpg" target="_blank">
+<img src="images/les_asiales/asiale1.jpg">
+<div class="card-content">
+<h3>Murmure d'Asie 1</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x 70 cm</p>
+<p><strong>Année :</strong> 2022</p>
+<p>
+
+</p>
+</div>
+</a>
+
+<a class="card" href="images/les_asiales/asiale2.jpg" target="_blank">
+<img src="images/les_asiales/asiale2.jpg">
+<div class="card-content">
+<h3>Murmure d'Asie 2</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x 70 cm</p>
+<p><strong>Année :</strong> 2022</p>
+<p>
+
+</p>
+</div>
+</a>
+
+<a class="card" href="images/les_asiales/asiale3.jpg" target="_blank">
+<img src="images/les_asiales/asiale3.jpg">
+<div class="card-content">
+<h3>Murmure d'Asie 3</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x 70 cm</p>
+<p><strong>Année :</strong> 2022</p>
+<p>
+
+</p>
+</div>
+</a>
+    
+    
+</div>
+
+    
+<!-- ===================================================== -->
+<!-- ============== LES BATEAUX ROUGES =================== -->
+<!-- ===================================================== -->
+    
+<h2 id="bateaux-rouges">Les Bateaux Rouges</h2>
+<div class="gallery">
+    
+    <a class="card" href="images/les_bateaux_rouges/le_bateau_jaune.jpg" target="_blank">
+<img src="images/les_bateaux_rouges/le_bateau_jaune.jpg">
+<div class="card-content">
+<h3>Les Géants du Port</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x70 cm</p>
+<p><strong>Année :</strong> 2024</p>
+<p>
+« Alignés sous la lumière du soir, les navires deviennent des sentinelles immobiles, gardiennes de voyages achevés et de départs à venir. »
+</p>
+</div>
+</a>
+  
+    <a class="card" href="images/les_bateaux_rouges/le_dernier_feu_du_port.jpg" target="_blank">
+<img src="images/les_bateaux_rouges/le_dernier_feu_du_port.jpg">
+<div class="card-content">
+<h3>Les Géants assoupis</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x70 cm</p>
+<p><strong>Année :</strong> 2024</p>
+<p>
+« Sous un soleil d'or et de braise, les coques rouges se rassemblent comme de vieux compagnons racontant leurs voyages à voix basse.
+</p>
+</div>
+</a>
+
+   <a class="card" href="images/les_bateaux_rouges/les_veilleurs_du_port.jpg" target="_blank">
+<img src="images/les_bateaux_rouges/les_veilleurs_du_port.jpg">
+<div class="card-content">
+<h3>Les remorqueurs</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x70 cm</p>
+<p><strong>Année :</strong> 2024</p>
+<p>
+« Entre ciel incandescent et ombres profondes, le port devient un théâtre silencieux où les navires attendent la prochaine marée. »
+</p>
+</div>
+</a>
+    
+
+</div>
+
+<!-- ===================================================== -->
+<!-- ================= LES LIGNES ======================== -->
+<!-- ===================================================== -->
+
+<h2 id="lignes">Les Lignes</h2>
+<div class="gallery">
+
+<a class="card" href="images/les_lignes/neos.jpg" target="_blank">
+<img src="images/les_lignes/neos.jpg">
+<div class="card-content">
+<h3>Convergence </h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x70 cm</p>
+<p><strong>Année :</strong> 2021</p>
+<p>
+Dans le silence des formes naît une architecture intérieure, où chaque ligne semble conduire vers un centre invisible
+</p>
+</div>
+</a>
+
+    
+
+
+    <a class="card" href="images/les_lignes/quelques_traces.jpg" target="_blank">
+<img src="images/les_lignes/quelques_traces.jpg">
+<div class="card-content">
+<h3>Quelques Traces</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x70 cm</p>
+<p><strong>Année :</strong> 2022</p>
+<p>
+  « Comme aperçu à travers un vitrail imaginaire, un paysage se dévoile peu à peu. Les lignes de l'arbre relient 
+    la terre au ciel tandis que les couleurs racontent le passage des saisons. »  
+<p>   
+</div>
+</a>
+
+<a class="card" href="images/les_lignes/soirorage1.jpg" target="_blank">
+<img src="images/les_lignes/soirorage1.jpg">
+<div class="card-content">
+<h3>Soir d'Orage 1</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x70 cm</p>
+<p><strong>Année :</strong> 2020</p>
+<p>
+« Quelques lignes suffisent à dessiner un monde. Une colline, une maison, quelques arbres, et le calme s'installe. »
+</p>
+</div>
+</a>
+
+ <a class="card" href="images/les_lignes/soirorage2.jpg" target="_blank">
+<img src="images/les_lignes/soirorage2.jpg">
+<div class="card-content">
+<h3>Soir d'Orage 2 </h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x70 cm</p>
+<p><strong>Année :</strong> 2020</p>
+<p>
+ « Quelques lignes suffisent à dessiner un monde. Une colline, une maison, quelques arbres, et le calme s'installe. »
+<p>   
+</div>
+</a>
+
+
+</div>
+
+    
+<!-- ===================================================== -->
+<!-- ================= LES SOLITUDES ===================== -->
+<!-- ===================================================== -->
+
+<h2 id="solitudes">Les Solitudes</h2>
+<div class="gallery">
+
+ <a class="card" href="images/les_solitudes/bavardages.jpg" target="_blank">
+<img src="images/les_solitudes/bavardages.jpg">
+<div class="card-content">
+<h3>Bavardages </h3>
+<p><strong>Technique :</strong> dessin acrylique sur papier</p>
+<p><strong>Dimensions :</strong> 20 x30 cm</p>
+<p><strong>Année :</strong> 2019</p>
+<p>
+
+<p>   
+</div>
+</a>
+
+ <a class="card" href="images/les_solitudes/noir_et_or.jpg" target="_blank">
+<img src="images/les_solitudes/noir_et_or.jpg">
+<div class="card-content">
+<h3>Noir et Or</h3>
+<p><strong>Technique :</strong> dessin acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x70 cm</p>
+<p><strong>Année :</strong> 2021</p>
+<p>
+
+<p>   
+</div>
+</a>
+    
+ <a class="card" href="images/les_solitudes/belle_endormie.jpg" target="_blank">
+<img src="images/les_solitudes/belle_endormie.jpg">
+<div class="card-content">
+<h3>La Belle Endormie </h3>
+<p><strong>Technique :</strong> acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x70 cm</p>
+<p><strong>Année :</strong> 2020</p>
+<p>
+
+<p>   
+</div>
+</a>
+
+ <a class="card" href="images/les_solitudes/entre_femmes.jpg" target="_blank">
+<img src="images/les_solitudes/entre_femmes.jpg">
+<div class="card-content">
+<h3>Entre Femmes</h3>
+<p><strong>Technique :</strong> huile sur toile</p>
+<p><strong>Dimensions :</strong> 50 x70 cm</p>
+<p><strong>Année :</strong> 2023</p>
+<p>
+
+<p>   
+</div>
+</a>
+
+ <a class="card" href="images/les_solitudes/inspiration.jpg" target="_blank">
+<img src="images/les_solitudes/inspiration.jpg">
+<div class="card-content">
+<h3>Copie Picasso</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x70 cm</p>
+<p><strong>Année :</strong> 2021</p>
+<p>
+
+<p>   
+</div>
+</a>
+
+ <a class="card" href="images/les_solitudes/lecture.jpg" target="_blank">
+<img src="images/les_solitudes/lecture.jpg">
+<div class="card-content">
+<h3>Lecture</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x70 cm</p>
+<p><strong>Année :</strong> 2021</p>
+<p>
+
+<p>   
+</div>
+</a>
+
+ <a class="card" href="images/les_solitudes/la_solitude.jpg" target="_blank">
+<img src="images/les_solitudes/la_solitude.jpg">
+<div class="card-content">
+<h3>Seule</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x70 cm</p>
+<p><strong>Année :</strong> 2021</p>
+<p>
+
+<p>   
+</div>
+</a>
+    
+
+
+<a class="card" href="images/les_solitudes/le_petit_berger.jpg" target="_blank">
+<img src="images/les_solitudes/le_petit_berger.jpg">
+<div class="card-content">
+<h3>Le Petit Berger</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x70 cm</p>
+<p><strong>Année :</strong> 2021</p>
+<p>
+
+<p>   
+</div>
+</a>
+
+<a class="card" href="images/les_solitudes/malika.jpg" target="_blank">
+<img src="images/les_solitudes/malika.jpg">
+<div class="card-content">
+<h3>malika</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x70 cm</p>
+<p><strong>Année :</strong> 2021</p>
+<p>
+
+<p>   
+</div>
+</a>
+
+    
+<a class="card" href="images/les_solitudes/laurence.jpg" target="_blank">
+<img src="images/les_solitudes/laurence.jpg">
+<div class="card-content">
+<h3>tristesse/h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x70 cm</p>
+<p><strong>Année :</strong> 2021</p>
+<p>
+
+<p>   
+</div>
+</a>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- ================= LES AMADEOS ===================== -->
+<!-- ===================================================== -->
+
+<h2 id="amadeos">Les Amadeos</h2>
+<div class="gallery">
+
+<a class="card" href="images/les_amadeos/bonnet1.jpg" target="_blank">
+<img src="images/les_amadeos/bonnet1.jpg">
+<div class="card-content">
+<h3>La Jeune Fille au Bonnet Bleu</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x70 cm</p>
+<p><strong>Année :</strong> 2023</p>
+<p>
+
+<p>   
+</div>
+</a>
+
+<a class="card" href="images/les_amadeos/bonnet2.jpg" target="_blank">
+<img src="images/les_amadeos/bonnet2.jpg">
+<div class="card-content">
+<h3>La jeune fille au Bonnet Bleu 2</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x70 cm</p>
+<p><strong>Année :</strong> 2023</p>
+<p>
+
+<p>   
+</div>
+</a>
+    
+</div>   
+
+<!-- ===================================================== -->
+<!-- ================= LES SIGNATURES ===================== -->
+<!-- ===================================================== -->
+
+
+   <h2 id="signatures">Les Signatures</h2>
+<div class="gallery"> 
+
+<a class="card" href="images/les_signatures/en_mon_nom.jpg" target="_blank">
+<img src="images/les_signatures/en_mon_nom.jpg">
+<div class="card-content">
+<h3>En Mon Nom</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x70 cm</p>
+<p><strong>Année :</strong> 2019</p>
+<p>
+
+<p>   
+</div>
+</a>
+
+<a class="card" href="images/les_signatures/signature_bleue.jpg" target="_blank">
+<img src="images/les_signatures/signature_bleue.jpg">
+<div class="card-content">
+<h3>La Signature Bleue</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 70 110 cm</p>
+<p><strong>Année :</strong> 2021</p>
+<p>
+
+<p>   
+</div>
+</a>
+
+<a class="card" href="images/les_signatures/signature_cg.jpg" target="_blank">
+<img src="images/les_signatures/signature_cg.jpg">
+<div class="card-content">
+<h3>La Signature</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x70 cm</p>
+<p><strong>Année :</strong> 2019</p>
+<p>
+
+<p>   
+</div>
+</a>
+    
+<a class="card" href="images/les_signatures/signature_clo.jpg" target="_blank">
+<img src="images/les_signatures/signature_clo.jpg">
+<div class="card-content">
+<h3>La Signature Color</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x70 cm</p>
+<p><strong>Année :</strong> 2019</p>
+<p>
+
+<p>   
+</div>
+</a>
+
+
+
+<a class="card" href="images/les_signatures/signature3.jpg" target="_blank">
+<img src="images/les_signatures/signature3.jpg">
+<div class="card-content">
+<h3>La Signature3</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 70 x110 cm</p>
+<p><strong>Année :</strong> 2019</p>
+<p>
+
+<p>   
+</div>
+</a>    
+
+<a class="card" href="images/les_signatures/signature_noire.jpg" target="_blank">
+<img src="images/les_signatures/signature_noire.jpg">
+<div class="card-content">
+<h3>La Signature Noire</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 70 x110 cm</p>
+<p><strong>Année :</strong> 2019</p>
+<p>
+
+<p>   
+</div>
+</a>  
+
+    
+<a class="card" href="images/les_signatures/signature_couleurs.jpg" target="_blank">
+<img src="images/les_signatures/signature_couleurs.jpg">
+<div class="card-content">
+<h3>La Signature Couleurs</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 70 x110 cm</p>
+<p><strong>Année :</strong> 2019</p>
+<p>
+
+<p>   
+</div>
+</a>
+
+    
+
+
+    
+<a class="card" href="images/les_signatures/signature4.jpg" target="_blank">
+<img src="images/les_signatures/signature4.jpg">
+<div class="card-content">
+<h3>La Signature4</h3>
+<p><strong>Technique :</strong> Acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 70 x110 cm</p>
+<p><strong>Année :</strong> 2019</p>
+<p>
+
+<p>   
+</div>
+</a>    
+
+</div>
+
+<!-- ===================================================== -->
+<!-- ================= LES PAYSAGES ===================== -->
+<!-- ===================================================== -->
+
+<h2 id="paysages">Les paysages</h2>
+<div class="gallery">
+
+ <a class="card" href="images/les_paysages/embrasement_de_la_cite.jpg" target="_blank">
+<img src="images/les_paysages/embrasement_de_la_cite.jpg">
+<div class="card-content">
+<h3>l'Embrasement de la Citée </h3>
+<p><strong>Technique :</strong> acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 70 x50 cm</p>
+<p><strong>Année :</strong> 2019</p>
+<p>
+
+<p>   
+</div>
+</a>
+    
+ <a class="card" href="images/les_paysages/le_barrage.jpg" target="_blank">
+<img src="images/les_paysages/le_barrage.jpg">
+<div class="card-content">
+<h3>le Barrage </h3>
+<p><strong>Technique :</strong> acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x70 cm</p>
+<p><strong>Année :</strong> 2019</p>
+<p>
+
+<p>   
+</div>
+</a>
+
+<a class="card" href="images/les_paysages/le_chaos.jpg" target="_blank">
+<img src="images/les_paysages/le_chaos.jpg">
+<div class="card-content">
+<h3>le Chaos </h3>
+<p><strong>Technique :</strong> acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 70 x50 cm</p>
+<p><strong>Année :</strong> 2019</p>
+<p>
+
+<p>   
+</div>
+</a>  
+    
+<a class="card" href="images/les_paysages/le_chemin_des_arbres.jpg" target="_blank">
+<img src="images/les_paysages/le_chemin_des_arbres.jpg">
+<div class="card-content">
+<h3>le Chemin des Arbres </h3>
+<p><strong>Technique :</strong> acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x70 cm</p>
+<p><strong>Année :</strong> 2019</p>
+<p>
+
+<p>   
+</div>
+</a>  
+
+<a class="card" href="images/les_paysages/lyon.jpg" target="_blank">
+<img src="images/les_paysages/lyon.jpg">
+<div class="card-content">
+<h3>Lyon</h3>
+<p><strong>Technique :</strong> acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x70 cm</p>
+<p><strong>Année :</strong> 2019</p>
+<p>
+
+<p>   
+</div>
+</a>  
+
+ <a class="card" href="images/les_paysages/new_york.jpg" target="_blank">
+<img src="images/les_paysages/new_york.jpg">
+<div class="card-content">
+<h3>New York</h3>
+<p><strong>Technique :</strong> acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 100 x100 cm</p>
+<p><strong>Année :</strong> 2020</p>
+<p>
+
+<p>   
+</div>
+</a>    
+
+  <a class="card" href="images/les_paysages/paris_new_york.jpg" target="_blank">
+<img src="images/les_paysages/paris_new_york.jpg">
+<div class="card-content">
+<h3>Paris-New York</h3>
+<p><strong>Technique :</strong> acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 70 x50 cm</p>
+<p><strong>Année :</strong> 2020</p>
+<p>
+
+<p>   
+</div>
+</a
+
+ <a class="card" href="images/les_paysages/paysage_terre.jpg" target="_blank">
+<img src="images/les_paysages/paysage_terre.jpg">
+<div class="card-content">
+<h3>Paysage-Terre</h3>
+<p><strong>Technique :</strong> dessin acrylique sur papier</p>
+<p><strong>Dimensions :</strong> 70 x50 cm</p>
+<p><strong>Année :</strong> 2020</p>
+<p>
+
+<p>   
+</div>
+</a
+
+<a class="card" href="images/les_paysages/une_rue_de_goree.jpg" target="_blank">
+<img src="images/les_paysages/une_rue_de_goree.jpg">
+<div class="card-content">
+<h3>Une Rue de Gorée</h3>
+<p><strong>Technique :</strong> dessin acrylique sur papier</p>
+<p><strong>Dimensions :</strong> 70 x50 cm</p>
+<p><strong>Année :</strong> 2020</p>
+<p>
+
+<p>   
+</div>
+</a
+
+</div>
+
+<!-- ===================================================== -->
+<!-- ================= LES DAMNES ===================== -->
+<!-- ===================================================== -->
+
+<h2 id="murmures_d_ames">Murmures d'âmes</h2>
+<div class="gallery">
+
+
+
+ <a class="card" href="images/murmures_d_ames/les_penitents.jpg" target="_blank">
+<img src="images/murmures_d_ames/les_penitents.jpg">
+<div class="card-content">
+<h3>Les Penitents</h3>
+<p><strong>Technique :</strong> huile sur toile</p>
+<p><strong>Dimensions :</strong> 50 x 70 cm</p>
+<p><strong>Année :</strong> 2019</p>
+</div>
+</a>
+    
+ <a class="card" href="images/murmures_d_ames/les_damnes.jpg" target="_blank">
+<img src="images/murmures_d_ames/les_damnes.jpg">
+<div class="card-content">
+<h3>Les Damnés</h3>
+<p><strong>Technique :</strong> huile sur toile</p>
+<p><strong>Dimensions :</strong> 50 x 70 cm</p>
+<p><strong>Année :</strong> 2019</p>
+</div>
+</a>
+
+    
+</div>
+
+<!-- ===================================================== -->
+<!-- ================= LES PORTRAITS ===================== -->
+<!-- ===================================================== -->
+
+<h2 id="portraits">Les Portraits</h2>
+<div class="gallery">
+
+ <a class="card" href="images/portraits/adeline.jpg" target="_blank">
+<img src="images/portraits/adeline.jpg">
+<div class="card-content">
+<h3>Adeline</h3>
+<p><strong>Technique :</strong> acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x 70 cm</p>
+<p><strong>Année :</strong> 2020</p>  
+</div>
+</a>
+
+ <a class="card" href="images/portraits/ame.jpg" target="_blank">
+<img src="images/portraits/ame.jpg">
+<div class="card-content">
+<h3>Le Dernier Horizon</h3>
+<p><strong>Technique :</strong> acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x 70 cm</p>
+<p><strong>Année :</strong> 2020</p>  
+</div>
+</a>
+
+
+ <a class="card" href="images/portraits/claudius.jpg" target="_blank">
+<img src="images/portraits/claudius.jpg">
+<div class="card-content">
+<h3>Claudius</h3>
+<p><strong>Technique :</strong> acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x 70 cm</p>
+<p><strong>Année :</strong> 2024</p>
+</div>
+</a>
+
+ <a class="card" href="images/portraits/consuela.jpg" target="_blank">
+<img src="images/portraits/consuela.jpg">
+<div class="card-content">
+<h3>Consuela</h3>
+<p><strong>Technique :</strong> acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x 80 cm</p>
+<p><strong>Année :</strong> 2024</p>
+ </div>
+ </a>
+
+ <a class="card" href="images/portraits/elle.jpg" target="_blank">
+<img src="images/portraits/elle.jpg">
+<div class="card-content">
+<h3>Elle - I love You</h3>
+<p><strong>Technique :</strong> acrylique sur papier</p>
+<p><strong>Dimensions :</strong> 50 x 80 cm</p>
+<p><strong>Année :</strong> 2024</p>
+ </div>
+ </a>
+
+<a class="card" href="images/portraits/fannie.jpg" target="_blank">
+<img src="images/portraits/fannie.jpg">
+<div class="card-content">
+<h3>Fannie</h3>
+<p><strong>Technique :</strong> acrylique sur papier</p>
+<p><strong>Dimensions :</strong> 60 x 60 cm</p>
+<p><strong>Année :</strong> 2024</p>
+</div>
+</a>
+
+<a class="card" href="images/portraits/fanette.jpg" target="_blank">
+<img src="images/portraits/fanette.jpg">
+<div class="card-content">
+<h3>Fanette</h3>
+<p><strong>Technique :</strong> acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x 70 cm</p>
+<p><strong>Année :</strong> 2020</p>
+ </div>
+</a>
+    
+<a class="card" href="images/portraits/fleur.jpg" target="_blank">
+<img src="images/portraits/fleur.jpg">
+<div class="card-content">
+<h3>Fleur</h3>
+<p><strong>Technique :</strong> acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x 70 cm</p>
+<p><strong>Année :</strong> 2020</p>
+  </div>
+</a>
+
+<a class="card" href="images/portraits/jeanne_h.jpg" target="_blank">
+<img src="images/portraits/jeanne_h.jpg">
+<div class="card-content">
+<h3>Jeanne H</h3>
+<p><strong>Technique :</strong> acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x 70 cm</p>
+<p><strong>Année :</strong> 2020</p>
+</div>
+</a>
+
+<a class="card" href="images/portraits/manureva.jpg" target="_blank">
+<img src="images/portraits/manureva.jpg">
+<div class="card-content">
+<h3>Manureva</h3>
+<p><strong>Technique :</strong> acrylique sur papier</p>
+<p><strong>Dimensions :</strong> 80 x 80 cm</p>
+<p><strong>Année :</strong> 2024</p>
+  </div>
+</a>
+
+<a class="card" href="images/portraits/monique.jpg" target="_blank">
+<img src="images/portraits/monique.jpg">
+<div class="card-content">
+<h3>Monique</h3>
+<p><strong>Technique :</strong> acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x 70 cm</p>
+<p><strong>Année :</strong> 2024</p>
+  </div>
+</a>
+    
+<a class="card" href="images/portraits/patrick.jpg" target="_blank">
+<img src="images/portraits/patrick.jpg">
+<div class="card-content">
+<h3>Patrick D</h3>
+<p><strong>Technique :</strong> acrylique sur papier</p>
+<p><strong>Dimensions :</strong> 80 x 80 cm</p>
+<p><strong>Année :</strong> 2024</p>
+</div>
+</a>
+
+<a class="card" href="images/portraits/preference.jpg" target="_blank">
+<img src="images/portraits/preference.jpg">
+<div class="card-content">
+<h3>Ma Préférence</h3>
+<p><strong>Technique :</strong> acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x 70 cm</p>
+<p><strong>Année :</strong> 2022</p>
+  </div>
+</a>
+    
+<a class="card" href="images/portraits/sophie.jpg" target="_blank">
+<img src="images/portraits/sophie.jpg">
+<div class="card-content">
+<h3>Sophie</h3>
+<p><strong>Technique :</strong> acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x 70 cm</p>
+<p><strong>Année :</strong> 2022</p>
+</div>
+</a>
+
+<a class="card" href="images/portraits/tahiti.jpg" target="_blank">
+<img src="images/portraits/tahiti.jpg">
+<div class="card-content">
+<h3>Fleur des Iles</h3>
+<p><strong>Technique :</strong> acrylique sur toile</p>
+<p><strong>Dimensions :</strong> 50 x 70 cm</p>
+<p><strong>Année :</strong> 2022</p>
+</div>
+</a>
+
+ </div>
+    
+</section>
+<div class="viewer" id="viewer">
+    <span class="close-viewer" onclick="closeViewer()">×</span>
+    <span class="prev-viewer" onclick="changeImage(-1)">‹</span>
+    <img id="viewerImg" src="">
+    <span class="next-viewer" onclick="changeImage(1)">›</span>
+</div>
+
+
+    
+<footer>
+© Claude Grand — Claudius Art Studio
+</footer>
+<script>
+let currentImages = [];
+let currentIndex = 0;
+
+document.querySelectorAll(".gallery").forEach(gallery => {
+    const cards = gallery.querySelectorAll(".card");
+
+    cards.forEach((card, index) => {
+        card.addEventListener("click", function(event){
+            event.preventDefault();
+
+            currentImages = Array.from(cards).map(c => c.getAttribute("href"));
+            currentIndex = index;
+
+            document.getElementById("viewerImg").src = currentImages[currentIndex];
+            document.getElementById("viewer").style.display = "flex";
+        });
+    });
+});
+
+function closeViewer(){
+    document.getElementById("viewer").style.display = "none";
+}
+
+function changeImage(direction){
+    currentIndex += direction;
+
+    if(currentIndex < 0){
+        currentIndex = currentImages.length - 1;
+    }
+
+    if(currentIndex >= currentImages.length){
+        currentIndex = 0;
+    }
+
+    document.getElementById("viewerImg").src = currentImages[currentIndex];
+}
+
+document.addEventListener("keydown", function(event){
+    if(event.key === "Escape"){
+        closeViewer();
+    }
+
+    if(event.key === "ArrowRight"){
+        changeImage(1);
+    }
+
+    if(event.key === "ArrowLeft"){
+        changeImage(-1);
+    }
+});
+</script>
+</body>
+</html>
